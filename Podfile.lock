@@ -1,0 +1,26 @@
+PODS:
+  - SDWebImage (5.3.1):
+    - SDWebImage/Core (= 5.3.1)
+  - SDWebImage/Core (5.3.1)
+  - SideMenu (6.4.6)
+  - XLPagerTabStrip (9.0.0)
+
+DEPENDENCIES:
+  - SDWebImage (~> 5.0)
+  - SideMenu
+  - XLPagerTabStrip (~> 9.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SDWebImage
+    - SideMenu
+    - XLPagerTabStrip
+
+SPEC CHECKSUMS:
+  SDWebImage: 7137d57385fb632129838c1e6ab9528a22c666cc
+  SideMenu: 43910eb6dc994dd59771f8e82573d04a9e776361
+  XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
+
+PODFILE CHECKSUM: ab26cf61b977ec858afe67d3f4f45c07f59a63b8
+
+COCOAPODS: 1.5.3

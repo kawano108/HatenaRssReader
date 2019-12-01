@@ -16,6 +16,7 @@
 		9EAA43672393FE5000838550 /* RssClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43662393FE5000838550 /* RssClient.swift */; };
 		9EAA43692393FF6800838550 /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43682393FF6800838550 /* ArticleList.swift */; };
 		9EAA436B2394025600838550 /* ArticleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA436A2394025600838550 /* ArticleListTableViewController.swift */; };
+		A065119B5E5D5F8A4CE92C1B /* Pods_HatenaRssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		9EAA43662393FE5000838550 /* RssClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssClient.swift; sourceTree = "<group>"; };
 		9EAA43682393FF6800838550 /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
 		9EAA436A2394025600838550 /* ArticleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewController.swift; sourceTree = "<group>"; };
+		A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatenaRssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A08D91EBA021E1D6465ACA /* Pods-HatenaRssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaRssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader.debug.xcconfig"; sourceTree = "<group>"; };
+		F4040AC4650E5BA386AF3CBE /* Pods-HatenaRssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaRssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A065119B5E5D5F8A4CE92C1B /* Pods_HatenaRssReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2770AE2EEFB0C2D697FC3385 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66F3477FF7F239C90417137E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B4A08D91EBA021E1D6465ACA /* Pods-HatenaRssReader.debug.xcconfig */,
+				F4040AC4650E5BA386AF3CBE /* Pods-HatenaRssReader.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9EAA43462393F90300838550 = {
 			isa = PBXGroup;
 			children = (
 				9EAA43512393F90300838550 /* HatenaRssReader */,
 				9EAA43502393F90300838550 /* Products */,
+				66F3477FF7F239C90417137E /* Pods */,
+				2770AE2EEFB0C2D697FC3385 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EAA43632393F90700838550 /* Build configuration list for PBXNativeTarget "HatenaRssReader" */;
 			buildPhases = (
+				B734DA4ECBA3807BFEBA522F /* [CP] Check Pods Manifest.lock */,
 				9EAA434B2393F90300838550 /* Sources */,
 				9EAA434C2393F90300838550 /* Frameworks */,
 				9EAA434D2393F90300838550 /* Resources */,
+				5BF65DBB0632A64610A8922D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +167,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BF65DBB0632A64610A8922D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B734DA4ECBA3807BFEBA522F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HatenaRssReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9EAA434B2393F90300838550 /* Sources */ = {
@@ -294,6 +363,7 @@
 		};
 		9EAA43642393F90700838550 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4A08D91EBA021E1D6465ACA /* Pods-HatenaRssReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +382,7 @@
 		};
 		9EAA43652393F90700838550 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4040AC4650E5BA386AF3CBE /* Pods-HatenaRssReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

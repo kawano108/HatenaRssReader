@@ -16,6 +16,9 @@
 		9EAA43672393FE5000838550 /* RssClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43662393FE5000838550 /* RssClient.swift */; };
 		9EAA43692393FF6800838550 /* ArticleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43682393FF6800838550 /* ArticleList.swift */; };
 		9EAA436B2394025600838550 /* ArticleListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA436A2394025600838550 /* ArticleListTableViewController.swift */; };
+		9EAA436D23940FBE00838550 /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA436C23940FBE00838550 /* PageMenuViewController.swift */; };
+		9EAA43702394113600838550 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA436E2394113600838550 /* ArticleCell.swift */; };
+		9EAA43712394113600838550 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA436F2394113600838550 /* ArticleCell.xib */; };
 		A065119B5E5D5F8A4CE92C1B /* Pods_HatenaRssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +34,9 @@
 		9EAA43662393FE5000838550 /* RssClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RssClient.swift; sourceTree = "<group>"; };
 		9EAA43682393FF6800838550 /* ArticleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleList.swift; sourceTree = "<group>"; };
 		9EAA436A2394025600838550 /* ArticleListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListTableViewController.swift; sourceTree = "<group>"; };
+		9EAA436C23940FBE00838550 /* PageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
+		9EAA436E2394113600838550 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
+		9EAA436F2394113600838550 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
 		A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatenaRssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A08D91EBA021E1D6465ACA /* Pods-HatenaRssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaRssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F4040AC4650E5BA386AF3CBE /* Pods-HatenaRssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaRssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +96,9 @@
 				9EAA43542393F90300838550 /* SceneDelegate.swift */,
 				9EAA43562393F90300838550 /* ViewController.swift */,
 				9EAA436A2394025600838550 /* ArticleListTableViewController.swift */,
+				9EAA436E2394113600838550 /* ArticleCell.swift */,
+				9EAA436F2394113600838550 /* ArticleCell.xib */,
+				9EAA436C23940FBE00838550 /* PageMenuViewController.swift */,
 				9EAA43662393FE5000838550 /* RssClient.swift */,
 				9EAA43682393FF6800838550 /* ArticleList.swift */,
 				9EAA43582393F90300838550 /* Main.storyboard */,
@@ -160,6 +169,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EAA43712394113600838550 /* ArticleCell.xib in Resources */,
 				9EAA435F2393F90700838550 /* LaunchScreen.storyboard in Resources */,
 				9EAA435C2393F90700838550 /* Assets.xcassets in Resources */,
 				9EAA435A2393F90300838550 /* Main.storyboard in Resources */,
@@ -176,12 +186,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HTMLReader/HTMLReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTMLReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -216,11 +228,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EAA43702394113600838550 /* ArticleCell.swift in Sources */,
 				9EAA436B2394025600838550 /* ArticleListTableViewController.swift in Sources */,
 				9EAA43692393FF6800838550 /* ArticleList.swift in Sources */,
 				9EAA43572393F90300838550 /* ViewController.swift in Sources */,
 				9EAA43672393FE5000838550 /* RssClient.swift in Sources */,
 				9EAA43532393F90300838550 /* AppDelegate.swift in Sources */,
+				9EAA436D23940FBE00838550 /* PageMenuViewController.swift in Sources */,
 				9EAA43552393F90300838550 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

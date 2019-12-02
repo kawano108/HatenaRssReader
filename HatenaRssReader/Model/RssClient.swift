@@ -17,7 +17,8 @@ class RssClient {
 
         let rssToJsonFormat = "https://api.rss2json.com/v1/api.json?rss_url="
         let apiKey = "&api_key=hybg4dcph35nb1dukcxlctpevjn8hb2fvibpuhzd"
-        let rssToJsonUrl = rssToJsonFormat + urlString + apiKey
+        let count = "&count=25"
+        let rssToJsonUrl = rssToJsonFormat + urlString + apiKey + count
         
          // URL型に変換できない文字列の場合は弾く
         guard let url = URL(string: rssToJsonUrl) else {

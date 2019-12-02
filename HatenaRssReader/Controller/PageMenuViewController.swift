@@ -29,8 +29,8 @@ class PageMenuViewController: ButtonBarPagerTabStripViewController {
                                                               blue: 245/255,
                                                               alpha: 1)
         settings.style.selectedBarBackgroundColor = .systemBlue
-        settings.style.buttonBarMinimumLineSpacing = 0
         settings.style.buttonBarItemTitleColor = .darkGray
+        settings.style.buttonBarMinimumLineSpacing = 0
     }
     
     private func createViewControllers() -> [UIViewController] {

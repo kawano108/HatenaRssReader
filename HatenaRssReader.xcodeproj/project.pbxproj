@@ -20,6 +20,8 @@
 		9EAA43712394113600838550 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA436F2394113600838550 /* ArticleCell.xib */; };
 		9EAA43782395702700838550 /* DefaultRssList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43772395702700838550 /* DefaultRssList.swift */; };
 		9EAA437A2395886500838550 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43792395886400838550 /* EditTableViewController.swift */; };
+		9EAA437E23958C7700838550 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA437D23958C7700838550 /* Category.swift */; };
+		9EAA438023958F3B00838550 /* DetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA437F23958F3B00838550 /* DetailWebViewController.swift */; };
 		A065119B5E5D5F8A4CE92C1B /* Pods_HatenaRssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		9EAA436F2394113600838550 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
 		9EAA43772395702700838550 /* DefaultRssList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRssList.swift; sourceTree = "<group>"; };
 		9EAA43792395886400838550 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
+		9EAA437D23958C7700838550 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		9EAA437F23958F3B00838550 /* DetailWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWebViewController.swift; sourceTree = "<group>"; };
 		A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatenaRssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A08D91EBA021E1D6465ACA /* Pods-HatenaRssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaRssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F4040AC4650E5BA386AF3CBE /* Pods-HatenaRssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaRssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				9EAA436C23940FBE00838550 /* PageMenuViewController.swift */,
 				9EAA43792395886400838550 /* EditTableViewController.swift */,
 				9EAA436A2394025600838550 /* ArticleListTableViewController.swift */,
+				9EAA437F23958F3B00838550 /* DetailWebViewController.swift */,
 				9EAA436E2394113600838550 /* ArticleCell.swift */,
 				9EAA436F2394113600838550 /* ArticleCell.xib */,
 			);
@@ -132,6 +137,7 @@
 				9EAA43662393FE5000838550 /* RssClient.swift */,
 				9EAA43682393FF6800838550 /* ArticleList.swift */,
 				9EAA43772395702700838550 /* DefaultRssList.swift */,
+				9EAA437D23958C7700838550 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +220,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HTMLReader/HTMLReader.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework",
@@ -221,6 +229,8 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTMLReader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLPagerTabStrip.framework",
@@ -261,9 +271,11 @@
 				9EAA436B2394025600838550 /* ArticleListTableViewController.swift in Sources */,
 				9EAA43692393FF6800838550 /* ArticleList.swift in Sources */,
 				9EAA43672393FE5000838550 /* RssClient.swift in Sources */,
+				9EAA438023958F3B00838550 /* DetailWebViewController.swift in Sources */,
 				9EAA43532393F90300838550 /* AppDelegate.swift in Sources */,
 				9EAA436D23940FBE00838550 /* PageMenuViewController.swift in Sources */,
 				9EAA43552393F90300838550 /* SceneDelegate.swift in Sources */,
+				9EAA437E23958C7700838550 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,10 @@
 PODS:
   - HTMLReader (2.1.4)
+  - Realm (4.1.0):
+    - Realm/Headers (= 4.1.0)
+  - Realm/Headers (4.1.0)
+  - RealmSwift (4.1.0):
+    - Realm (= 4.1.0)
   - SDWebImage (5.3.1):
     - SDWebImage/Core (= 5.3.1)
   - SDWebImage/Core (5.3.1)
@@ -8,6 +13,7 @@ PODS:
 
 DEPENDENCIES:
   - HTMLReader
+  - RealmSwift
   - SDWebImage (~> 5.0)
   - SideMenu
   - XLPagerTabStrip (~> 9.0)
@@ -15,16 +21,20 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - HTMLReader
+    - Realm
+    - RealmSwift
     - SDWebImage
     - SideMenu
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   HTMLReader: 2fc5ccf6a041b7070d9b43b101034cba63d2ae2a
+  Realm: 5d1453468eca02c901c50b8a356f4a98a15b57aa
+  RealmSwift: 1d238caa5c64a590c669beef1a7e858a6cf55a1c
   SDWebImage: 7137d57385fb632129838c1e6ab9528a22c666cc
   SideMenu: 43910eb6dc994dd59771f8e82573d04a9e776361
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: dc831945f848cbeccac24ab85a5b9216c40483b3
+PODFILE CHECKSUM: 762009716e8431af2f49ee15f37011a178c8f6d6
 
 COCOAPODS: 1.5.3

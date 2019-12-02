@@ -84,12 +84,17 @@ class ArticleListTableViewController: UITableViewController, IndicatorInfoProvid
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return items.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let link = items[indexPath.row].link
+        let vc = DetailWebViewController(urlStr: link)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {

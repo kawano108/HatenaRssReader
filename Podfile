@@ -11,5 +11,6 @@ target 'HatenaRssReader' do
   pod 'SDWebImage', '~> 5.0'
   pod 'SideMenu'
   pod "HTMLReader"
+  pod 'RealmSwift'
 
 end

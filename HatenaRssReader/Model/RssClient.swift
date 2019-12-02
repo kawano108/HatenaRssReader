@@ -15,8 +15,12 @@ class RssClient {
     /// - Parameter completion: 完了時の処理
     static func fetchArticleList(urlString: String, completion: @escaping (Result<ArticleList, Error>) -> ()) {
 
+        let rssToJsonFormat = "https://api.rss2json.com/v1/api.json?rss_url="
+        let apiKey = "&api_key=hybg4dcph35nb1dukcxlctpevjn8hb2fvibpuhzd"
+        let rssToJsonUrl = rssToJsonFormat + urlString + apiKey
+        
          // URL型に変換できない文字列の場合は弾く
-        guard let url = URL(string: urlString) else {
+        guard let url = URL(string: rssToJsonUrl) else {
             completion(.failure(NetworkError.invalidURL))
             return
         }

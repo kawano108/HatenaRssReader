@@ -12,7 +12,7 @@ import Foundation
 struct ArticleList: Codable {
     let status: String
     let feed: Feed
-    let items: [Items]
+    let items: [Item]
 }
 /// フィード
 struct Feed: Codable {
@@ -23,7 +23,7 @@ struct Feed: Codable {
     let description: String
 }
 /// 記事詳細
-struct Items: Codable {
+struct Item: Codable {
     let title: String
     let pubDate: String
     let link: String

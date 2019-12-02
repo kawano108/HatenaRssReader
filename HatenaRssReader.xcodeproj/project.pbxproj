@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9EAA43532393F90300838550 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43522393F90300838550 /* AppDelegate.swift */; };
 		9EAA43552393F90300838550 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43542393F90300838550 /* SceneDelegate.swift */; };
-		9EAA43572393F90300838550 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43562393F90300838550 /* ViewController.swift */; };
 		9EAA435A2393F90300838550 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA43582393F90300838550 /* Main.storyboard */; };
 		9EAA435C2393F90700838550 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA435B2393F90700838550 /* Assets.xcassets */; };
 		9EAA435F2393F90700838550 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA435D2393F90700838550 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,8 @@
 		9EAA436D23940FBE00838550 /* PageMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA436C23940FBE00838550 /* PageMenuViewController.swift */; };
 		9EAA43702394113600838550 /* ArticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA436E2394113600838550 /* ArticleCell.swift */; };
 		9EAA43712394113600838550 /* ArticleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EAA436F2394113600838550 /* ArticleCell.xib */; };
+		9EAA43782395702700838550 /* DefaultRssList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43772395702700838550 /* DefaultRssList.swift */; };
+		9EAA437A2395886500838550 /* EditTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAA43792395886400838550 /* EditTableViewController.swift */; };
 		A065119B5E5D5F8A4CE92C1B /* Pods_HatenaRssReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +27,6 @@
 		9EAA434F2393F90300838550 /* HatenaRssReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HatenaRssReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EAA43522393F90300838550 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EAA43542393F90300838550 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9EAA43562393F90300838550 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9EAA43592393F90300838550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EAA435B2393F90700838550 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EAA435E2393F90700838550 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +37,8 @@
 		9EAA436C23940FBE00838550 /* PageMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuViewController.swift; sourceTree = "<group>"; };
 		9EAA436E2394113600838550 /* ArticleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCell.swift; sourceTree = "<group>"; };
 		9EAA436F2394113600838550 /* ArticleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleCell.xib; sourceTree = "<group>"; };
+		9EAA43772395702700838550 /* DefaultRssList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultRssList.swift; sourceTree = "<group>"; };
+		9EAA43792395886400838550 /* EditTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTableViewController.swift; sourceTree = "<group>"; };
 		A28507E3E551E30D5A388DD6 /* Pods_HatenaRssReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HatenaRssReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A08D91EBA021E1D6465ACA /* Pods-HatenaRssReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaRssReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader.debug.xcconfig"; sourceTree = "<group>"; };
 		F4040AC4650E5BA386AF3CBE /* Pods-HatenaRssReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HatenaRssReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-HatenaRssReader/Pods-HatenaRssReader.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,21 +94,46 @@
 		9EAA43512393F90300838550 /* HatenaRssReader */ = {
 			isa = PBXGroup;
 			children = (
+				9EAA437623956FC600838550 /* Model */,
+				9EAA437523956FC000838550 /* View */,
+				9EAA437423956FB100838550 /* Controller */,
 				9EAA43522393F90300838550 /* AppDelegate.swift */,
 				9EAA43542393F90300838550 /* SceneDelegate.swift */,
-				9EAA43562393F90300838550 /* ViewController.swift */,
-				9EAA436A2394025600838550 /* ArticleListTableViewController.swift */,
-				9EAA436E2394113600838550 /* ArticleCell.swift */,
-				9EAA436F2394113600838550 /* ArticleCell.xib */,
-				9EAA436C23940FBE00838550 /* PageMenuViewController.swift */,
-				9EAA43662393FE5000838550 /* RssClient.swift */,
-				9EAA43682393FF6800838550 /* ArticleList.swift */,
 				9EAA43582393F90300838550 /* Main.storyboard */,
 				9EAA435B2393F90700838550 /* Assets.xcassets */,
 				9EAA435D2393F90700838550 /* LaunchScreen.storyboard */,
 				9EAA43602393F90700838550 /* Info.plist */,
 			);
 			path = HatenaRssReader;
+			sourceTree = "<group>";
+		};
+		9EAA437423956FB100838550 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9EAA436C23940FBE00838550 /* PageMenuViewController.swift */,
+				9EAA43792395886400838550 /* EditTableViewController.swift */,
+				9EAA436A2394025600838550 /* ArticleListTableViewController.swift */,
+				9EAA436E2394113600838550 /* ArticleCell.swift */,
+				9EAA436F2394113600838550 /* ArticleCell.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9EAA437523956FC000838550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9EAA437623956FC600838550 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9EAA43662393FE5000838550 /* RssClient.swift */,
+				9EAA43682393FF6800838550 /* ArticleList.swift */,
+				9EAA43772395702700838550 /* DefaultRssList.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,10 +255,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EAA43782395702700838550 /* DefaultRssList.swift in Sources */,
+				9EAA437A2395886500838550 /* EditTableViewController.swift in Sources */,
 				9EAA43702394113600838550 /* ArticleCell.swift in Sources */,
 				9EAA436B2394025600838550 /* ArticleListTableViewController.swift in Sources */,
 				9EAA43692393FF6800838550 /* ArticleList.swift in Sources */,
-				9EAA43572393F90300838550 /* ViewController.swift in Sources */,
 				9EAA43672393FE5000838550 /* RssClient.swift in Sources */,
 				9EAA43532393F90300838550 /* AppDelegate.swift in Sources */,
 				9EAA436D23940FBE00838550 /* PageMenuViewController.swift in Sources */,
